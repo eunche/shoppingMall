@@ -1,0 +1,169 @@
+*{box-sizing : border-box;}
+
+.root {
+    margin: auto;
+    width: 90%;
+}
+
+
+
+
+
+/*
+*
+헤더
+*
+*/
+.header {
+    height: 200px;
+    display: flex;
+}
+
+.mall_name {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav#navbar {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav#navbar ul {
+    list-style: none;
+    text-align: center;
+    
+    padding: 10px 0;
+}
+
+nav#navbar ul li{
+    display: inline;
+    text-transform: uppercase;
+    padding: 0 20px;
+    letter-spacing: 8px;
+}
+
+nav#navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+nav#navbar ul li a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+/*
+*
+메인
+*
+*/
+
+.main {
+    display: flex;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #F2F2F2;
+}
+
+.search {
+    margin-top: 1em;
+    margin-bottom: 3em;
+}
+
+aside#category {
+    width: 30%;
+    padding: 2em;
+}
+
+aside#category h4{
+    font-size: 30px;
+    margin-top: 0;
+
+}
+
+aside#category ul{
+    font-size: 15px;
+    list-style: none;
+    text-indent: 15px;
+    padding: 0;
+}
+
+aside#category ul li{
+    line-height: 28px;
+    border-bottom: 1px solid #333;
+}
+
+aside#category ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 800;
+    display: block;
+}
+
+aside#category ul li a:hover{
+    background: #B40404;
+}
+
+.contents {
+    width: 70%;
+    padding: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.item {
+    width: 30%;
+    height: 40vh;
+    margin-bottom: 3em;
+}
+
+.item_img {
+    height: 75%;
+    background-color: aquamarine;
+}
+
+.item_img > img {
+    width: 100%;
+    height: 100%;
+}
+
+.item_name {
+    height: 25%;
+    padding-top: 0.5em;
+}
+
+
+
+/*
+*
+풋터
+*
+*/
+
+#footer {width: 100%; height: 100px;}
+.copyright {width: 520px; margin: 30px 30px 30px 220px; float: left; text-align: center;}
+.sns_wrap {width: 308px; float: left; height: 40px; margin: 30px 20px;}
+.sns_wrap li {float: left; width: 33.33%}
+
+
+
+/*
+*
+search.html
+*
+*/
+.search_result {
+    width:100%;
+}
+
+.search_result > h2 {
+}
