@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contents">
+    {% for cap in caps %}
+    <div class="item">
+        <div class="item_img">
+            <img src="{{cap.image.url}}">
+        </div>
+        <div class="item_name">
+            {{cap.title}}<br>
+            ─{{cap.price}}원
+        </div>
+    </div>
+    {% endfor %}
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+{% endblock %}

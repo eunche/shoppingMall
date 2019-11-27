@@ -1,0 +1,17 @@
+<div class="login_form">
+        <h1>Login</h1>
+        <form method="POST" action="{% url 'login'%}">
+
+        {% csrf_token %}
+        아이디:
+        <br>
+        <input name="username" type="text" value="">
+        <br>
+        비밀번호:
+        <br>
+        <input name="password" type="password" value="">
+        <br>
+        <br>
+        <input class="btn btn-primary" type="submit" value="로그인"><a href="{%url 'register'%}">회원가입</a>
+        </form>
+</div>

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contents">
+    {% for bottom in bottoms %}
+    <div class="item">
+        <div class="item_img">
+            <img src="{{bottom.image.url}}">
+        </div>
+        <div class="item_name">
+            {{bottom.title}}<br>
+            ─{{bottom.price}}원
+        </div>
+    </div>
+    {% endfor %}
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+{% endblock %}

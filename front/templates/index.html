@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contents">
+    {% for post in posts %}
+    <div class="item">
+        <div class="item_img">
+            <img src="{{post.image.url}}">
+        </div>
+        <div class="item_name">
+            {{post.title}}<br>
+            ─{{post.price}}원
+        </div>
+    </div>
+    {% endfor %}
+    <div class="item"></div>
+</div>
+{% endblock %}
