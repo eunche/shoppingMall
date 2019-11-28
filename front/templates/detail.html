@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="contents">
+    <div class="det_img">
+        <img src=../{{product.image}}>
+    </div>
+
+    <div class="det_about">
+        <h4><strong>{{product.title}}</strong></h4>
+        <span class="det_field">PRICE</span>
+        <span>{{product.price}}원</span>
+        <div class="det_btn">
+            <button type="button" class="btn btn-outline-dark">BUY</button>
+            <button type="button" class="btn btn-outline-dark">CART</button>
+            <button type="button" class="btn btn-outline-dark">WISH</button>
+        </div>
+        <hr style="margin-bottom: 1em;">
+        <h5>INSTRUCTION</h5>
+        <p>제품에 대한 소개가 들어가는 곳 입니다.</p>
+        
+        
+    </div>
+
+
+
+    <!-- {{product.title}}
+    <img src=../{{product.image}}>
+    {{product.price}} -->
+</div>
+{% endblock %}

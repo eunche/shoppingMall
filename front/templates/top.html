@@ -4,12 +4,14 @@
     {% for top in tops %}
     <div class="item">
         <div class="item_img">
-            <img src=../{{top.image}}>
+            <a href="{% url 'detail' top.id %}"><img src=../{{top.image}}></a>
         </div>
-        <div class="item_name">
-            {{top.title}}<br>
-            ─{{top.price}}원
-        </div>
+        <a href="{% url 'detail' top.id %}">
+            <div class="item_name">
+                {{top.title}}<br>
+                ─{{top.price}}원
+            </div>
+        </a>
     </div>
     {% endfor %}
     <div class="item"></div>

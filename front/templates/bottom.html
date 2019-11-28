@@ -4,12 +4,14 @@
     {% for bottom in bottoms %}
     <div class="item">
         <div class="item_img">
-            <img src=../{{bottom.image}}>
+            <a href="{% url 'detail' bottom.id %}"><img src=../{{bottom.image}}></a>
         </div>
-        <div class="item_name">
-            {{bottom.title}}<br>
-            ─{{bottom.price}}원
-        </div>
+        <a href="{% url 'detail' bottom.id %}">
+            <div class="item_name">
+                {{bottom.title}}<br>
+                ─{{bottom.price}}원
+            </div>
+        </a>
     </div>
     {% endfor %}
     <div class="item"></div>

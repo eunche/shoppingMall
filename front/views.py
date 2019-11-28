@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Post
 from django.utils.datastructures import MultiValueDictKeyError
 
@@ -46,3 +46,8 @@ def search(request):
         results.append(object)
 
     return render(request,'search.html',{'results':results,'get':get})
+
+def detail(request, product_id):
+    product = get_object_or_404(Post, pk=product_id)
+
+    return render(request, 'detail.html', {'product':product})

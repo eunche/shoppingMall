@@ -7,12 +7,14 @@
     {% for result in results %}
     <div class="item">
         <div class="item_img">
-            <img src=../{{result.image}}>
+            <a href="{% url 'detail' result.id %}"><img src=../{{result.image}}></a>
         </div>
-        <div class="item_name">
-            {{result.title}}<br>
-            ─{{result.price}}원
-        </div>
+        <a href="{% url 'detail' result.id %}">
+            <div class="item_name">
+                {{result.title}}<br>
+                ─{{result.price}}원
+            </div>
+        </a>
     </div>
     {% endfor %}
 </div>
