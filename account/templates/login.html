@@ -9,18 +9,17 @@
 {% block content %}
 <div class="contents">
         <div class="login_form">
-                <h1>Login</h1>
                 <br>
                 <form method="POST" action="{% url 'login'%}">
 
                 {% csrf_token %}
-                <input name="username" type="text" value="" placeholder="MEMBER ID">
+                <input class="acc" name="username" type="text" value="" placeholder=" MEMBER ID" required>
                 <br><br>
-                <input name="password" type="password" value="" placeholder="PASSWORD">
+                <input class="acc" name="password" type="password" value="" placeholder=" PASSWORD" required>
                 <br>
                 <br>
-                <input class="btn btn-secondary" type="submit" value="로그인">
-                <input class="btn btn-secondary" type="button" value="회원가입" onClick="location.href='{%url 'register'%}'">
+                <input class="btn btn-secondary" type="submit" value="LOGIN">
+                <input class="btn btn-secondary" type="button" value="REGISTER" onClick="location.href='{%url 'register'%}'">
                 </form>
         </div>
 </div>

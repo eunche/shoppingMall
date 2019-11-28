@@ -12,23 +12,19 @@
 {% block content %}
 <div class="contents">
     <div>
-        <h1>Register</h1>
         <form method="POST" action="{% url 'register'%}">
         {% csrf_token %}
-            아이디:
             <br>
-            <input name="username" type="text" value="">
-            <br>
-            비밀번호:
-            <br>
-            <input name="password1" type="password" value="">
-            <br>
-            비밀번호 재확인:
-            <br>
-            <input name="password2" type="password" value="">
+            <input class="acc" name="username" type="text" value="" placeholder=" MEMBER ID" required>
             <br>
             <br>
-            <input class="btn btn-secondary" type="submit" value="회원가입">
+            <input class="acc" name="password1" type="password" value="" placeholder=" PASSWORD" required>
+            <br>
+            <br>
+            <input class="acc" name="password2" type="password" value="" placeholder=" PASSWORD AGAIN" required>
+            <br>
+            <br>
+            <input class="btn btn-secondary" type="submit" value="REGISTER">
         </form>
         </div>
 </div>
