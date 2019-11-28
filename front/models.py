@@ -5,7 +5,7 @@ from django.db import models
 class Post(models.Model) :
     title = models.CharField(max_length = 200)
     price = models.IntegerField()
-    image = models.ImageField(upload_to='images/')
+    image = models.ImageField()
     ctg= (
     (5, '외투'),
 
