@@ -1,20 +1,35 @@
-<div>        
-    <h1>Register</h1>
-    <form method="POST" action="{% url 'register'%}">
-    {% csrf_token %}
-        아이디:
-        <br>
-        <input name="username" type="text" value="">
-        <br>
-        비밀번호:
-        <br>
-        <input name="password1" type="password" value="">
-        <br>
-        비밀번호 재확인:
-        <br>
-        <input name="password2" type="password" value="">
-        <br>
-        <br>
-        <input class="btn btn-primary" type="submit" value="회원가입">
-    </form>
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'account/login.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+<div class="contents">
+    <div>
+        <h1>Register</h1>
+        <form method="POST" action="{% url 'register'%}">
+        {% csrf_token %}
+            아이디:
+            <br>
+            <input name="username" type="text" value="">
+            <br>
+            비밀번호:
+            <br>
+            <input name="password1" type="password" value="">
+            <br>
+            비밀번호 재확인:
+            <br>
+            <input name="password2" type="password" value="">
+            <br>
+            <br>
+            <input class="btn btn-secondary" type="submit" value="회원가입">
+        </form>
+        </div>
 </div>
+{% endblock %}
