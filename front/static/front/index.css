@@ -98,6 +98,7 @@ aside#category ul{
     list-style: none;
     text-indent: 15px;
     padding: 0;
+    margin-bottom: 100px;
 }
 
 aside#category ul li{
