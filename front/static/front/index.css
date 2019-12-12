@@ -121,13 +121,13 @@ aside#category ul li a:hover{
     padding: 2em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around
 }
 
 .item {
     width: 30%;
     height: 40vh;
     margin-bottom: 3em;
+    margin: 0 1.666% 3em 1.666%;
 }
 
 .item a {
