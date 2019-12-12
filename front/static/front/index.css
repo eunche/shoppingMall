@@ -215,9 +215,53 @@ detail.html
     margin-bottom: 30px;
 }
 
-.det_field {
-    margin-right: 3em;
+.det_line {
+    margin-bottom: 1em;
+    display: flex;
 }
+
+.det_field {
+    width: 30%;
+}
+
+.det_contents {
+    width: 70%;
+}
+
+.det_contents > select {
+    width: 100%;
+    border-color: #D0D0D0;
+}
+
+
+.det_totalPrice {
+    display: flex;
+    margin-top: 40px;
+}
+
+.det_tleft {
+    width: 60%;
+}
+
+.det_tleft > span {
+    margin-right: 10px;
+}
+
+.det_tleft > input {
+    width: 40px;
+    border-color: #DEDEDE;
+    margin-right: 10px;
+}
+
+.det_tright {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    color:red;
+    align-items: center;
+}
+
+
 
 .det_btn {
     margin-top: 3em;

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load staticfiles %}
 {% block content %}
 <div class="contents">
     <div class="det_img">
@@ -7,8 +8,44 @@
 
     <div class="det_about">
         <h4><strong>{{product.title}}</strong></h4>
-        <span class="det_field">PRICE</span>
-        <span>{{product.price}}원</span>
+        <div class="det_line">
+            <span class="det_field">PRICE</span>
+            <span class="det_contents">{{product.price}}원</span>
+            <span class="js-price" style="display: none;">{{product.price}}</span>
+        </div>
+        <div class="det_line">
+            <span class="det_field">COLOR</span>
+            <span class="det_contents">
+                <select id="" name="" required>
+                    <option value="" selected disabled hidden >OPTION</option>
+                    {% for option in color_option %}
+                        <option value={{option}}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </span>
+        </div>
+        <div class="det_line">
+            <span class="det_field">SIZE</span>
+            <span class="det_contents">
+                <select id="" name="" required>
+                    <option value="" selected disabled hidden >OPTION</option>
+                    {% for option in size_option %}
+                        <option value={{option}}>{{option}}</option>
+                    {% endfor %}
+                </select>
+            </span>
+        </div>
+
+        <div class="det_totalPrice">
+            <div class="det_tleft">
+                <input type="number" value="1" class="js-ea">
+                <span><strong>총상품금액(수량)</strong></span>
+            </div>
+            <div class="det_tright">
+                <span><strong class="js-total_price">{{product.price}}원(1개)</strong></span>
+            </div>
+        </div>
+
         <div class="det_btn">
             <button type="button" class="btn btn-outline-dark">BUY</button>
             <button type="button" class="btn btn-outline-dark">CART</button>
@@ -22,9 +59,9 @@
     </div>
 
 
-
-    <!-- {{product.title}}
-    <img src=../{{product.image}}>
-    {{product.price}} -->
 </div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'front/detail.js' %}"></script>
 {% endblock %}

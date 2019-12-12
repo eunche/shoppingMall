@@ -49,5 +49,25 @@ def search(request):
 
 def detail(request, product_id):
     product = get_object_or_404(Post, pk=product_id)
+    category = product.category
+    color_option = []
+    size_option = []
 
-    return render(request, 'detail.html', {'product':product})
+    if(category==1):
+        color_option.append("one color")
+        size_option.append("FREE")
+    elif(category==2):
+        color_option.append("one color")
+        size_option.extend(["220","225","230","235","240","245","250","255","260","265","270","275","280"])
+    elif(category==3):
+        color_option.append("one color")
+        size_option.extend(["S","M","L"])
+    elif(category==4):
+        color_option.append("one color")
+        size_option.extend(["S","M","L"])
+    elif(category==5):
+        color_option.extend(["one color"])
+        size_option.extend(["S","M","L"])
+
+
+    return render(request, 'detail.html', {'product':product,'color_option':color_option,'size_option':size_option})
