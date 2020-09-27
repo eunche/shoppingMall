@@ -1,6 +1,7 @@
-{% load staticfiles %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <!-- meta  -->
     <meta charset="UTF-8">
@@ -38,14 +39,14 @@
                 <ul>
                     <li><a href="{% url 'index' %}" target="_self">home</a></li>
                     {% if user.is_authenticated %}
-                        <li style="letter-spacing: 0px;text-transform:none;"><strong>{{ user.username }}</strong> 님!</li>
-                        <li><a href="javascript:{document.getElementById('logout').submit()}">logout</a></li>
-                        <form id="logout" method="POST" action="{% url 'logout' %}">
-                            {% csrf_token %}
-                        </form>
+                    <li style="letter-spacing: 0px;text-transform:none;"><strong>{{ user.username }}</strong> 님!</li>
+                    <li><a href="javascript:{document.getElementById('logout').submit()}">logout</a></li>
+                    <form id="logout" method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                    </form>
                     {% else %}
-                        <li><a href="{% url 'login' %}">login</a></li>
-                        <li><a href="{% url 'register' %}" style="letter-spacing: 1.5px;">Register</a></li>
+                    <li><a href="{% url 'login' %}">login</a></li>
+                    <li><a href="{% url 'register' %}" style="letter-spacing: 1.5px;">Register</a></li>
                     {% endif %}
                 </ul>
             </nav>
@@ -74,7 +75,8 @@
 
                 <h4>GAME</h4>
                 <ul>
-                    <li style="border-bottom:0px;"><a href="https://gnumall.github.io/gnumall/index" target="_blank">CARD GAME</a></li>
+                    <li style="border-bottom:0px;"><a href="https://gnumall.github.io/gnumall/index"
+                            target="_blank">CARD GAME</a></li>
                 </ul>
             </aside>
             {% block content %}
@@ -96,12 +98,13 @@
                 <a href="http://www.twitter.com" target="_blank"><img src="{% static 'twitterlogo.PNG' %}"></a>
                 <a href="http://www.facebook.com" target="_blank"><img src="{% static 'facebooklogo.PNG' %}"></a>
                 <a href="http://www.instagram.com" target="_blank"><img src="{% static 'instalogo.PNG' %}"></a>
-	        </div>
+            </div>
         </footer>
     </div>
-    
+
 
     {% block script %}
     {% endblock %}
 </body>
+
 </html>

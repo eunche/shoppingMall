@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 
 
 
@@ -13,7 +13,7 @@
 <div class="contents">
     <div>
         <form method="POST" action="{% url 'register'%}">
-        {% csrf_token %}
+            {% csrf_token %}
             <br>
             <input class="acc" name="username" type="text" value="" placeholder=" MEMBER ID" required>
             <br>
@@ -26,6 +26,6 @@
             <br>
             <input class="btn btn-secondary" type="submit" value="REGISTER">
         </form>
-        </div>
+    </div>
 </div>
 {% endblock %}

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load staticfiles %}
+{% load static %}
 {% block content %}
 <div class="contents" style="justify-content: space-between;">
     <div class="det_img">
@@ -17,9 +17,9 @@
             <span class="det_field">COLOR</span>
             <span class="det_contents">
                 <select id="" name="" required>
-                    <option value="" selected disabled hidden >OPTION</option>
+                    <option value="" selected disabled hidden>OPTION</option>
                     {% for option in color_option %}
-                        <option value={{option}}>{{option}}</option>
+                    <option value={{option}}>{{option}}</option>
                     {% endfor %}
                 </select>
             </span>
@@ -28,9 +28,9 @@
             <span class="det_field">SIZE</span>
             <span class="det_contents">
                 <select id="" name="" required>
-                    <option value="" selected disabled hidden >OPTION</option>
+                    <option value="" selected disabled hidden>OPTION</option>
                     {% for option in size_option %}
-                        <option value={{option}}>{{option}}</option>
+                    <option value={{option}}>{{option}}</option>
                     {% endfor %}
                 </select>
             </span>
@@ -54,8 +54,8 @@
         <hr style="margin-bottom: 1em;">
         <h5>INSTRUCTION</h5>
         <p>제품에 대한 소개가 들어가는 곳 입니다.</p>
-        
-        
+
+
     </div>
 
 

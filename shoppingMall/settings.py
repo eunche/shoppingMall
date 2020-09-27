@@ -21,10 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = '962xo_)n4_-gh1o(j-nh-v1hi%vf#wht3+y$08zqut1e9ij#_^'
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
+SECRET_KEY = os.environ.get(
+    'DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
 
 ALLOWED_HOSTS = ['*']
 
@@ -43,7 +44,6 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -78,17 +78,9 @@ WSGI_APPLICATION = 'shoppingMall.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
-        'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shoppingMall',
-        'USER': 'postgres',
-        'PASSWORD': '@espera135',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -136,11 +128,3 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-
-
-# Heroku: Update database configuration from $DATABASE_URL.
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(db_from_env)
